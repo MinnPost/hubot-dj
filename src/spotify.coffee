@@ -1,8 +1,3 @@
-
-
-
-
-
 {join}      = require 'path'
 events      = require 'events'
 nunjucks    = require 'nunjucks'
@@ -50,8 +45,6 @@ module.exports = (robot) ->
     just type in a command.",
     "Is anybody up? Let's brew some coffee.",
     "I'm built with CoffeeScript and Shell, I'm made for parties.",
-    "You do know I don't like Justin Bieber right? Just so we're clear."
-    "Holy shit! It's nice to wake up from a shitty slumber.",
     "I'm rising from the murks of the sultry abyss.
     Let's get this show started."
   ]
@@ -60,28 +53,21 @@ module.exports = (robot) ->
   leave = [
     "I need to relieve myself in the bathroom to reboot my awesomeness.
     Peace out!",
-    "Rebooting to get my shit together, that was some party last night.",
-    "Had chinese food last night, I need to quickly poop my guts out.
-    See you in a bit."
+    "See you in a bit."
   ]
 
   ###
-  # @name Fuck Bieber, fuck bieber man..
+  # @name bieber thing
   # @desc Bot responds with these images whenever a user searches
-  #       for Justin Bieber. He makes good music, fine, but we don't want
-  #       to hear it. Thank you. Fuck Bieber man.
+  #       for Justin Bieber.
   ###
   bieber = [
-    "http://i0.kym-cdn.com/entries/icons/original/000/007/423/untitle.JPG",
-    "http://treasure.diylol.com/uploads/post/image/527849/resized_jesus-says-meme-generator-fuck-justin-bieber-i-listen-to-satanic-black-metal-888457.jpg",
-    "http://cf.chucklesnetwork.agj.co/items/7/7/7/3/5/yo-dawg-i-heard-you-liek-justin-bieber-so-we-killed-you.jpg",
-    "http://cdn2-b.examiner.com/sites/default/files/styles/image_content_width/hash/fb/76/fb76431b8c2ba99a5997d47f095a068e.jpg?itok=z7nrvYot",
-    "http://www.missceleb.com/wp-content/uploads/2014/07/justin-bieber-nicki-minaj-anaconda-meme.jpg"
+    "http://i0.kym-cdn.com/entries/icons/original/000/007/423/untitle.JPG"
   ]
 
   ###
   # @name ban array
-  # @desc lists of artists to ban to stop fuckers from trolling the playlist
+  # @desc lists of artists to ban
   ###
   ban = [
     'bieber'
