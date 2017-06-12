@@ -16,9 +16,9 @@ filepath = "#{join process.cwd(), 'node_modules/hubot-dj/views'}"
 template = new nunjucks.Environment(new nunjucks.FileSystemLoader(filepath))
 
 config =
-  clientId: 'af83782185e14a2e9195f9aca2e1cd70'
-  clientSecret: '9dc596e6f4e34b1ba5b22ca30c6f3961'
-  redirectUri: 'http://127.0.0.1:8080/spotify/callback'
+  clientId: process.env.SPOTIFY_CLIENT_ID
+  clientSecret: process.env.SPOTIFY_CLIENT_SECRET
+  redirectUri: process.env.SPOTIFY_CALLBACK_URL
 
 scopes = [
   'user-follow-read'
@@ -193,7 +193,7 @@ module.exports = (robot) ->
   #       shiz for batibot to post back to spotify in order for us to acquire
   #       authentication tokens and stuff... yazz.
   ###
-  robot.router.get '/spotify/callback', ((req, res, next) ->
+  robot.router.get '/hubot/oauth2/callback', ((req, res, next) ->
     robot.emit 'authenticate', req, res, next
     return
   ), (req, res) ->
