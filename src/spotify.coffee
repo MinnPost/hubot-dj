@@ -214,7 +214,6 @@ module.exports = (robot) ->
     console.log 'commands:', msg.match
 
     switch msg.match[1]
-      when 'help'
-
+      # when 'help'
       when 'search'
         msg.reply 'Search Spotify'
